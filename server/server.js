@@ -11,7 +11,7 @@ import callRoutes from "./routes/callRoutes.js";
 
 import User from "./models/User.js";
 import Message from "./models/Message.js";
-import Call from "./models/Call.js";
+import call from "./models/call.js";
 
 
 
@@ -69,7 +69,7 @@ io.on("connection", (socket) => {
     const receiverSocket = userSocketMap[to];
     if (!receiverSocket) return;
 
-    const call = await Call.create({
+    const call = await call.create({
       caller: userId,
       receiver: to,
       type: callType,

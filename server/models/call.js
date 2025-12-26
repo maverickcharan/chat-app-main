@@ -15,4 +15,4 @@ const callSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-export default mongoose.model("Call", callSchema);
+export default mongoose.model("call", callSchema);
